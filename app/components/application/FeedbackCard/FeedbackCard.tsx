@@ -15,34 +15,35 @@ export default function FeedbackBox({ className }: { className?: string }) {
   } = useTranslate()
 
   return (
-    <Card>
-      <div className="feedback box">
-        <div className="top">
-          <div className="row">
-            <div className="spaceholder">
-              <img
-                alt={feedback.feedbackShareAltText}
-                aria-hidden="true"
-                className="image"
-                src="/share-feedback.svg"
-              />
+    <a
+      aria-label="Click to share feedback with the Pokt Team in discord"
+      href="https://discord.gg/pokt"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <Card>
+        <div className="feedback box">
+          <div className="top">
+            <div className="row">
+              <div className="spaceholder">
+                <img
+                  alt={feedback.feedbackShareAltText}
+                  aria-hidden="true"
+                  className="image"
+                  src="/share-feedback.svg"
+                />
+              </div>
+              <div>
+                <h3 className="title">{feedback.feedbackTitle}</h3>
+                <p className="bodytext">{feedback.feedbackSubText}</p>
+              </div>
             </div>
-            <div>
-              <h3 className="title">{feedback.feedbackTitle}</h3>
-              <p className="bodytext">{feedback.feedbackSubText}</p>
+            <div className="discord-icon">
+              <IconDiscord />
             </div>
           </div>
-          <a
-            aria-label="Click to share feedback with the Pokt Team in discord"
-            className="discord-icon"
-            href="https://discord.gg/pokt"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <IconDiscord />
-          </a>
         </div>
-      </div>
-    </Card>
+      </Card>
+    </a>
   )
 }

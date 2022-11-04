@@ -64,7 +64,6 @@ export default function AppPlanDetails({
             component={Link}
             disabled={flags.STRIPE_PAYMENT === "false"}
             to={stripe}
-            variant="outline"
           >
             {t.AppPlanDetails.upgrade}
           </Button>
